@@ -5,26 +5,21 @@
 
 void printfRet(char (*atl)[82], int rows, int cols);
 
-int main()
-{
+int main() {
     char article[3][82];
     int rows = sizeof(article) / sizeof(article[0]);
     int cols = sizeof(article[0]) / sizeof(article[0][0]);
-    for (int i = 0; i < rows; ++i)
-    {
+    for (int i = 0; i < rows; ++i) {
         fgets((char *) article[i], cols, stdin);
     }
     printfRet(article, rows, cols);
     return 0;
 }
 
-void printfRet(char (*atl)[82], int rows, int cols)
-{
+void printfRet(char (*atl)[82], int rows, int cols) {
     int upW = 0, loW = 0, num = 0, space = 0, other = 0;
-    for (int i = 0; i < rows; ++i)
-    {
-        for (int j = 0; j < cols - 1; ++j)
-        {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols - 1; ++j) {
             char c = atl[i][j];
             if (c >= 'A' && c <= 'Z')
                 upW++;

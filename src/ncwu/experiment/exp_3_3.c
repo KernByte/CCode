@@ -16,20 +16,17 @@
 */
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int cProgram, math, sum;
     char grade;
     printf("请输入C语言和数学成绩（成绩为百分制，用空格隔开）：");
     scanf("%d %d", &cProgram, &math);
-    if (cProgram < 0 || cProgram > 100 || math < 0 || math > 100)
-    {
+    if (cProgram < 0 || cProgram > 100 || math < 0 || math > 100) {
         printf("输入错误！");
         return 1;
     }
     sum = cProgram + math;
-    switch (sum / 10)
-    {
+    switch (sum / 10) {
         case 20:
         case 19:
         case 18:

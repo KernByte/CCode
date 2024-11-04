@@ -18,10 +18,8 @@
  */
 #include <stdio.h>
 
-int main()
-{
-    for (int row = 1; row <= 9; ++row)
-    {
+int main() {
+    for (int row = 1; row <= 9; ++row) {
         for (int space = 1; space < row; ++space)
             printf("\t");
         for (int col = row; col <= 9; ++col)

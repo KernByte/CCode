@@ -8,8 +8,7 @@ void initStu(int stu[], int peo);
 
 void printAns(int stu[], int peo, int *pStu);
 
-int main()
-{
+int main() {
     int peo = 0;
     printf("请输入班级人数：");
     scanf("%d", &peo);
@@ -26,16 +25,13 @@ int main()
  * @param peo
  * @param pStu
  */
-void printAns(int stu[], int peo, int *pStu)
-{
+void printAns(int stu[], int peo, int *pStu) {
     pStu = malloc(sizeof(stu));
     pStu = stu;
     int max = -1;
     int max_Index = -1;
-    for (int i = 0; i < peo; ++i)
-    {
-        if (max < *(pStu + i))
-        {
+    for (int i = 0; i < peo; ++i) {
+        if (max < *(pStu + i)) {
             max = *(pStu + i);
             max_Index = i;
         }
@@ -48,12 +44,9 @@ void printAns(int stu[], int peo, int *pStu)
  * @param stu
  * @param peo
  */
-void initStu(int stu[], int peo)
-{
-    if (NULL != stu)
-    {
-        for (int i = 0; i < peo; ++i)
-        {
+void initStu(int stu[], int peo) {
+    if (NULL != stu) {
+        for (int i = 0; i < peo; ++i) {
             *(stu + i) = rand() % 101;
         }
     }

@@ -5,13 +5,10 @@
 
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int d, z, x;    //大中小马匹数
-    for (int d = 0; d <= 100; ++d)
-    {
-        for (int z = 0; z <= 100 - d; ++z)
-        {
+    for (int d = 0; d <= 100; ++d) {
+        for (int z = 0; z <= 100 - d; ++z) {
             x = 100 - d - z;
             if (x % 2 == 0 && 3 * d + 2 * z + x / 2 == 100)
                 printf("大马：%d批\t中马：%d批\t小马：%d批\n", d, z, x);

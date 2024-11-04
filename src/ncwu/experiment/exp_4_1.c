@@ -12,12 +12,10 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main() {
     unsigned long long int sum = 0;
     int i = 1;
-    while (i < 64)
-    {
+    while (i < 64) {
         sum += (long long) pow(2, i);
         i++;
     }

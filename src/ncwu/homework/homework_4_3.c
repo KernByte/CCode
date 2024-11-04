@@ -5,8 +5,7 @@
 
 void squeeze(char s[], char c);
 
-int main()
-{
+int main() {
     char s[80], c;
     gets(s);
     scanf("%c", &c);
@@ -15,13 +14,10 @@ int main()
     return 0;
 }
 
-void squeeze(char s[], char c)
-{
+void squeeze(char s[], char c) {
     int i, j = 0;
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        if (s[i] != c)
-        {
+    for (i = 0; s[i] != '\0'; i++) {
+        if (s[i] != c) {
             s[j] = s[i];
             j++;
         }

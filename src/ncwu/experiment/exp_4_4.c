@@ -4,11 +4,9 @@
 //1!+2!+3!+…+20!
 #include <stdio.h>
 
-int main()
-{
+int main() {
     long long int sum = 0, temp = 1;
-    for (int i = 1; i <= 20; ++i)
-    {
+    for (int i = 1; i <= 20; ++i) {
         temp *= i;
         sum += temp;
     }

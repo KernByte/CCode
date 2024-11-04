@@ -8,8 +8,7 @@
  * */
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int num;
     scanf("%d", &num);
     int g, s, b;

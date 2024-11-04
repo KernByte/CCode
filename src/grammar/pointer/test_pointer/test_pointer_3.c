@@ -5,8 +5,7 @@
 
 void print_arr(char(*p)[5], int rows);
 
-int main()
-{
+int main() {
     char arr[5][5] = {
             "hello",
             "c",
@@ -18,10 +17,8 @@ int main()
     return 0;
 }
 
-void print_arr(char(*p)[5], int rows)
-{
-    for (int i = 0; i < rows; ++i)
-    {
+void print_arr(char(*p)[5], int rows) {
+    for (int i = 0; i < rows; ++i) {
         printf("%s\n", *(p + i));
     }
 }

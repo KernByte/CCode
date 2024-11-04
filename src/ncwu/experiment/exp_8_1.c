@@ -9,13 +9,11 @@
 
 void get_max_len(char(*p)[MAX_STR_LEN], int size, char **max);
 
-int main()
-{
+int main() {
     char strings[MAX_NUM][MAX_STR_LEN];
     int size = 0;
     char *max = NULL;
-    while (size < MAX_NUM)
-    {
+    while (size < MAX_NUM) {
         scanf("%s", strings[size]);
         if (!strcmp("****", strings[size]))
             break;
@@ -26,15 +24,12 @@ int main()
     return 0;
 }
 
-void get_max_len(char(*p)[MAX_STR_LEN], int size, char **max)
-{
+void get_max_len(char(*p)[MAX_STR_LEN], int size, char **max) {
     int max_len = 0;
     *max = *p;
-    for (int i = 1; i < size; ++i)
-    {
+    for (int i = 1; i < size; ++i) {
         int temp = strlen(*(p + i));
-        if (max_len < temp)
-        {
+        if (max_len < temp) {
             max_len = temp;
             *max = *(p + i);
         }

@@ -12,8 +12,7 @@
  * */
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int hour;
     double money, amount;
     printf("请输入员工的劳动时间：");

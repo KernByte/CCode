@@ -5,14 +5,12 @@
 //（2）在得到正确结果后，请修改程序使之能分别统计大小写字母、空格、数字和其它字符的个数。
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int upWord = 0, lowWord = 0, space = 0, num = 0, other = 0;
     char str[100];
     fgets(str, sizeof(str), stdin);
     int i = 0;
-    while ('\0' != str[i])
-    {
+    while ('\0' != str[i]) {
         if (str[i] >= 65 && str[i] <= 90)
             upWord++;
         else if (str[i] >= 97 && str[i] <= 122)

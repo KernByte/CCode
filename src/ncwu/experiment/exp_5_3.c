@@ -11,23 +11,18 @@
 //               ......
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int yang[10][10] = {0};
-    for (int i = 0; i < sizeof(yang) / sizeof(yang[0]); ++i)
-    {
+    for (int i = 0; i < sizeof(yang) / sizeof(yang[0]); ++i) {
         yang[i][0] = 1;
         yang[i][i] = 1;
-        for (int j = 0; j <= i; ++j)
-        {
+        for (int j = 0; j <= i; ++j) {
             if (i != 0)
                 yang[i][j] = yang[i - 1][j - 1] + yang[i - 1][j];
         }
     }
-    for (int i = 0; i < sizeof(yang) / sizeof(yang[0]); ++i)
-    {
-        for (int j = 0; j <= i; ++j)
-        {
+    for (int i = 0; i < sizeof(yang) / sizeof(yang[0]); ++i) {
+        for (int j = 0; j <= i; ++j) {
             printf("%d\t", yang[i][j]);
         }
         printf("\n");

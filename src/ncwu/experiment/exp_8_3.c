@@ -8,15 +8,13 @@
 
 void func(int(*p)[COL]);
 
-int main()
-{
+int main() {
     int arr[ROW][COL];
     for (int i = 0; i < ROW; ++i)
         for (int j = 0; j < COL; ++j)
             scanf("%d", &arr[i][j]);
     func(arr);
-    for (int i = 0; i < ROW; ++i)
-    {
+    for (int i = 0; i < ROW; ++i) {
         for (int j = 0; j < COL; ++j)
             printf("%d ", arr[i][j]);
         printf("\n");
@@ -24,18 +22,14 @@ int main()
     return 0;
 }
 
-void func(int(*p)[COL])
-{
+void func(int(*p)[COL]) {
     int arr[ROW * COL];
     for (int i = 0; i < ROW; ++i)
         for (int j = 0; j < COL; ++j)
             arr[i * COL + j] = *(*(p + i) + j);
-    for (int i = 0; i < ROW * COL - 1; ++i)
-    {
-        for (int j = 0; j < ROW * COL - 1 - i; ++j)
-        {
-            if (arr[j] > arr[j + 1])
-            {
+    for (int i = 0; i < ROW * COL - 1; ++i) {
+        for (int j = 0; j < ROW * COL - 1 - i; ++j) {
+            if (arr[j] > arr[j + 1]) {
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;

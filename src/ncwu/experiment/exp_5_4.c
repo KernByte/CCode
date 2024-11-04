@@ -11,38 +11,30 @@
 //  45   54   156   7
 #include <stdio.h>
 
-int main()
-{
+int main() {
     printf("请输入数组的行和列（空格隔开）：");
     int rows, cols;
     scanf("%d %d", &rows, &cols);
     int arr[rows][cols];
-    for (int i = 0; i < rows; ++i)
-    {
-        for (int j = 0; j < cols; ++j)
-        {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
             scanf("%d", &arr[i][j]);
         }
     }
     int row_index, col_index, target;
     int flag = 0;
-    for (int i = 0; i < rows; ++i)
-    {
+    for (int i = 0; i < rows; ++i) {
         flag = 1;
         target = arr[i][0];
-        for (int j = 0; j < cols; ++j)
-        {
-            if (target < arr[i][j])
-            {
+        for (int j = 0; j < cols; ++j) {
+            if (target < arr[i][j]) {
                 target = arr[i][j];
                 row_index = i;
                 col_index = j;
             }
         }
-        for (int j = 0; j < rows; ++j)
-        {
-            if (target > arr[j][col_index])
-            {
+        for (int j = 0; j < rows; ++j) {
+            if (target > arr[j][col_index]) {
                 flag = 0;
                 break;
             }

@@ -9,8 +9,7 @@
  * */
 #include <stdio.h>
 
-int main()
-{
+int main() {
     double apple, pear, banana, orange, money, actual;
     printf("请输入苹果的重量：");
     scanf("%lf", &apple);
@@ -23,17 +22,13 @@ int main()
     money = apple * 2.5 + pear * 1.8 + banana * 2.0 + orange * 1.6;
     printf("顾客应付款：%.2f元\n", money);
     printf("顾客实际付款：");
-    while (1)
-    {
+    while (1) {
         scanf("%lf", &actual);
-        if (actual < 0)
-        {
+        if (actual < 0) {
             printf("金额不能是负数！\n请付款：");
-        } else if (actual < money)
-        {
+        } else if (actual < money) {
             printf("钱不够！\n请付款：");
-        } else
-        {
+        } else {
             printf("付款成功，应找回顾客%.2f元\n", actual - money);
             break;
         }

@@ -10,18 +10,15 @@
  */
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int n, m;
     int j, t;   // 鸡和兔
     scanf("%d %d", &n, &m);
     t = m / 2 - n;
     j = n - t;
-    if (m % 2 == 0 && t >= 0 && j >= 0)
-    {
+    if (m % 2 == 0 && t >= 0 && j >= 0) {
         printf("%d %d", j, t);
-    } else
-    {
+    } else {
         printf("No answer");
     }
     return 0;

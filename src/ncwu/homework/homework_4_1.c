@@ -3,14 +3,12 @@
 //
 #include <stdio.h>
 
-struct node
-{
+struct node {
     char ch;
     struct node *next;
 };
 
-int main()
-{
+int main() {
     struct node x, y;
     struct node *p;
     x.ch = 'A';

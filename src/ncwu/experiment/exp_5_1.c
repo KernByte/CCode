@@ -12,13 +12,11 @@
 //  2    (n / 2) + 1    n = n - ((n / 2) + 1)
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int peach = 1;
     int day = 10;
 
-    for (int i = day - 1; i >= 1; --i)
-    {
+    for (int i = day - 1; i >= 1; --i) {
         peach = (peach + 1) * 2;
     }
 

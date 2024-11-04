@@ -14,8 +14,7 @@
 */
 #include <stdio.h>
 
-int main()
-{
+int main() {
     char sex, sports, diet;
     float faHeight, moHeight, baby;
     printf("请输入小孩的性别（F表示女性，M表示男性）：\n");

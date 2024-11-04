@@ -5,8 +5,7 @@
 
 int get_comm(int x, int y);
 
-int main()
-{
+int main() {
     printf("请输入两个整数（空格隔开）：");
     int x = 0, y = 0;
     scanf("%d %d", &x, &y);
@@ -14,8 +13,7 @@ int main()
     return 0;
 }
 
-int get_comm(int x, int y)
-{
+int get_comm(int x, int y) {
     if (x > y)
         return get_comm(x - y, y);
     else if (x < y)
